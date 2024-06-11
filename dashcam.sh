@@ -16,10 +16,11 @@
 #    Contact me at groundsweepr@proton.me
 #!/bin/bash
 touch ~/log4dashcam.txt
-echo 'Started at '$(date)'.' >> ~/log4dashcam.txt
+echo 'Started at '$(date)'.' >> /dashcam/log4dashcam.txt
 for ((i = 0; i < 100; i++)); do
 	when=$(date)
 	when=${when// /_}
+	echo 'Started recording at '$when'.' >> /dashcam/log4dashcam.txt
 	rpicam-vid -t 10m -o /dashcam/vids/$when.h264
         space=$(df -h | grep "/dev/mapper/flashpo1nt--vg-root" | grep M | awk -F "{print $1, $2, $3}")
 	if[space -lt 250]; then
