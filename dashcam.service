@@ -16,7 +16,7 @@
 ::    Contact me at groundsweepr@proton.me
 [Unit]
 Description=A service to start the dashcam script.
-After=network.service
+After=networking.service
 
 [Service]
 ExecStart=/dashcam/dashcam.sh
