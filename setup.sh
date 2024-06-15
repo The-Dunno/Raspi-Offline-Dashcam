@@ -30,7 +30,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see https://www.gnu.org/licenses/gpl-3.0."
-echo 'Would you like me to echo the license? (y/n)\n:'
+echo "Would you like me to echo the license? (y/n):"
 read -r lic
 if [ $lic == "y" ]
 then
